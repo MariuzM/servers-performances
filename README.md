@@ -1,4 +1,4 @@
-# Prerequistes
+# Prerequisites
 
 ```bash
 wrk - https://github.com/wg/wrk
