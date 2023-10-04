@@ -11,7 +11,7 @@ wrk - https://github.com/wg/wrk
 
 Node - Fastify
 Bun - ElysiaJS
-Go
+Go - Fiber
 Zig
 ```
 
@@ -23,6 +23,23 @@ Zig
 - Pnpm 8.6.12
 - Bun 1.0.4
 
+### Commands to build and run
+
+```bash
+-- Node - Fastify
+pnpm i
+pnpm build
+pnpm start
+
+-- Bun - ElysiaJS
+bun i
+bun run build
+bun run start
+
+-- Go - Fiber
+go build app.go && ./app
+```
+
 ### Test commands
 
 ```bash
@@ -31,6 +48,9 @@ wrk -t12 -c400 -d30s http://localhost:3005/
 
 -- Bun - ElysiaJS
 wrk -t12 -c400 -d30s http://localhost:3006/
+
+-- Go - Fiber
+wrk -t12 -c400 -d30s http://localhost:3007/
 ```
 
 ### Results
@@ -57,4 +77,15 @@ Running 30s test @ http://localhost:3006
   Socket errors: connect 157, read 107, write 0, timeout 0
 Requests/sec:  86448.98
 Transfer/sec:     10.31MB
+
+-- Go - Fiber
+Running 30s test @ http://localhost:3007/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.72ms    3.22ms 123.03ms   95.31%
+    Req/Sec    12.25k     4.37k   46.82k    71.04%
+  4387485 requests in 30.10s, 523.03MB read
+  Socket errors: connect 157, read 169, write 0, timeout 0
+Requests/sec: 145786.66
+Transfer/sec:     17.38MB
 ```

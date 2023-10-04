@@ -9,6 +9,10 @@
         {
           "name": "bun-elysia",
           "commands": ["cd bun-elysia"]
+        },
+        {
+          "name": "go-fiber",
+          "commands": ["cd go-fiber"]
         }
       ]
     }
