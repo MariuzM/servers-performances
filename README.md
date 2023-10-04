@@ -1,3 +1,9 @@
+# Story
+
+I'm exploring different alterantives to what i'm used to Node / Express / Fastify.
+Currently i'm starting with MVP which is `hello world` simple response, this will give me
+a base / starting point to compare to more advance and real life use cases.
+
 # Prerequisites
 
 ```bash
