@@ -4,11 +4,11 @@ const app = Fastify();
 
 const PORT = Number(process.env.PORT) || 3005;
 
-app.get('/hello-world', async function handler(request, reply) {
+app.get('/', async () => {
   return { hello: 'world' };
 });
 
-app.listen({ port: PORT, host: '0.0.0.0' }, function (err) {
+app.listen({ port: PORT, host: '0.0.0.0' }, (err) => {
   if (err) {
     console.error(err);
     process.exit(1);

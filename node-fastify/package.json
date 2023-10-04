@@ -7,7 +7,8 @@
     "d": "pnpm dev",
     "dev": "tsx watch src/app.ts",
     "build": "tsc -build",
-    "start": "node build/app.js"
+    "start": "node build/app.js",
+    "bs": "pnpm run build && pnpm run start"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

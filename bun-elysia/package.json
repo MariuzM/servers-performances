@@ -1,0 +1,19 @@
+{
+  "name": "bun-elysia",
+  "version": "1.0.50",
+  "scripts": {
+    "d": "bun run --watch src/app.ts",
+    "dev": "bun run --watch src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bun build --target=bun ./src/app.ts --outdir ./build",
+    "start": "bun run ./build/app.js",
+    "bs": "bun run build && bun run start"
+  },
+  "dependencies": {
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/app.js"
+}

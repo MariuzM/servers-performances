@@ -5,6 +5,10 @@
         {
           "name": "node-fastify",
           "commands": ["cd node-fastify"]
+        },
+        {
+          "name": "bun-elysia",
+          "commands": ["cd bun-elysia"]
         }
       ]
     }
