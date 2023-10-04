@@ -1,13 +1,23 @@
+# Prerequistes
+
 ```bash
+wrk - https://github.com/wg/wrk
+
 Node - Fastify
 Bun - ElysiaJS
 Go
 Zig
 ```
 
-API Call request stress test with `wrk` https://github.com/wg/wrk
+## Benchmark Condition - Local
 
-## TEST - Localy on `MacBook Pro M1`
+- MacBook Pro M1 Max 64 GB
+- macOS Ventura 13.5.2
+- Node 20.6.1
+- Pnpm 8.6.12
+- Bun 1.0.4
+
+### Test commands
 
 ```bash
 -- Node - Fastify
