@@ -1,0 +1,12 @@
+{
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "node-fastify",
+          "commands": ["cd node-fastify"]
+        }
+      ]
+    }
+  ]
+}
