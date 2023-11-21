@@ -8,11 +8,6 @@ to compare to more advance and real life use cases.
 
 ```bash
 wrk - https://github.com/wg/wrk
-
-Node - Fastify
-Bun - ElysiaJS
-Go - Fiber
-Zig
 ```
 
 ## Benchmark Condition - Local
