@@ -26,48 +26,44 @@ Zig
 ### Commands to build and run
 
 ```bash
--- Node - Fastify
-pnpm i
-pnpm b
-pnpm st
-
 -- Bun - ElysiaJS
+bun i
+bun st
+
+-- Bun - Fastify
 bun i
 bun st
 
 -- Go - Fiber
 go build app.go && ./app
+
+-- Node - Fastify
+pnpm i
+pnpm b
+pnpm st
 ```
 
 ### Test commands
 
 ```bash
--- Node - Fastify
+-- Bun - ElysiaJS
 wrk -t12 -c400 -d30s http://localhost:3005
 
--- Bun - ElysiaJS
+-- Bun - Fastify
 wrk -t12 -c400 -d30s http://localhost:3006
 
 -- Go - Fiber
 wrk -t12 -c400 -d30s http://localhost:3007
+
+-- Node - Fastify
+wrk -t12 -c400 -d30s http://localhost:3008
 ```
 
 ### Results
 
 ```bash
--- Node - Fastify
-Running 30s test @ http://localhost:3005
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     3.65ms    5.56ms 299.27ms   99.79%
-    Req/Sec     5.79k     1.59k    9.91k    74.70%
-  2082358 requests in 30.10s, 373.35MB read
-  Socket errors: connect 157, read 202, write 0, timeout 0
-Requests/sec:  68172.32
-Transfer/sec:     12.40MB
-
 -- Bun - ElysiaJS
-Running 30s test @ http://localhost:3006/
+Running 30s test @ http://localhost:3005
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency     2.43ms  570.08us  16.02ms   57.70%
@@ -76,6 +72,17 @@ Running 30s test @ http://localhost:3006/
   Socket errors: connect 157, read 155, write 0, timeout 0
 Requests/sec:  95998.41
 Transfer/sec:     11.68MB
+
+-- Bun - Fastify
+Running 30s test @ http://localhost:3006
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.49ms  377.33us  15.01ms   83.06%
+    Req/Sec     5.73k     1.80k   15.76k    58.29%
+  2054935 requests in 30.10s, 274.36MB read
+  Socket errors: connect 157, read 111, write 0, timeout 0
+Requests/sec:  68763.99
+Transfer/sec:      9.11MB
 
 -- Go - Fiber
 Running 30s test @ http://localhost:3007
@@ -87,4 +94,15 @@ Running 30s test @ http://localhost:3007
   Socket errors: connect 157, read 169, write 0, timeout 0
 Requests/sec: 147895.34
 Transfer/sec:     17.38MB
+
+-- Node - Fastify
+Running 30s test @ http://localhost:3008
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.65ms    5.56ms 299.27ms   99.79%
+    Req/Sec     5.79k     1.59k    9.91k    74.70%
+  2082358 requests in 30.10s, 373.35MB read
+  Socket errors: connect 157, read 202, write 0, timeout 0
+Requests/sec:  68172.32
+Transfer/sec:     12.40MB
 ```

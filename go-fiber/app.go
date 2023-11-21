@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"os"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -10,10 +9,7 @@ import (
 func main() {
 	app := fiber.New()
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "3007"
-	}
+	port := "3007"
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{

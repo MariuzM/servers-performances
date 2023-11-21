@@ -2,7 +2,7 @@ import { Elysia } from 'elysia';
 
 const app = new Elysia();
 
-const PORT = Number(process.env.PORT) || 3006;
+const PORT = 3005;
 
 app
   .get('/', () => {

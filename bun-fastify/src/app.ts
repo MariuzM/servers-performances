@@ -2,7 +2,7 @@ import Fastify from 'fastify';
 
 const app = Fastify();
 
-const PORT = 3008;
+const PORT = 3006;
 
 app.get('/', async () => {
   return { hello: 'world' };
