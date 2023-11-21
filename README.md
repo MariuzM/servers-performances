@@ -21,18 +21,18 @@ wrk - https://github.com/wg/wrk
 ### Commands to build and run
 
 ```bash
--- Bun - ElysiaJS
+-- bun-elysia
 bun i
 bun st
 
--- Bun - Fastify
+-- bun-fastify
 bun i
 bun st
 
--- Go - Fiber
+-- go-fiber
 go build app.go && ./app
 
--- Node - Fastify
+-- node-fastify
 pnpm i
 pnpm b
 pnpm st
@@ -41,23 +41,23 @@ pnpm st
 ### Test commands
 
 ```bash
--- Bun - ElysiaJS
+-- bun-elysia
 wrk -t12 -c400 -d30s http://localhost:3005
 
--- Bun - Fastify
+-- bun-fastify
 wrk -t12 -c400 -d30s http://localhost:3006
 
--- Go - Fiber
+-- go-fiber
 wrk -t12 -c400 -d30s http://localhost:3007
 
--- Node - Fastify
+-- node-fastify
 wrk -t12 -c400 -d30s http://localhost:3008
 ```
 
 ### Results
 
 ```bash
--- Bun - ElysiaJS
+-- bun-elysia
 Running 30s test @ http://localhost:3005
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -68,7 +68,7 @@ Running 30s test @ http://localhost:3005
 Requests/sec:  95998.41
 Transfer/sec:     11.68MB
 
--- Bun - Fastify
+-- bun-fastify
 Running 30s test @ http://localhost:3006
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -79,7 +79,7 @@ Running 30s test @ http://localhost:3006
 Requests/sec:  68763.99
 Transfer/sec:      9.11MB
 
--- Go - Fiber
+-- go-fiber
 Running 30s test @ http://localhost:3007
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -90,7 +90,7 @@ Running 30s test @ http://localhost:3007
 Requests/sec: 147895.34
 Transfer/sec:     17.38MB
 
--- Node - Fastify
+-- node-fastify
 Running 30s test @ http://localhost:3008
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
