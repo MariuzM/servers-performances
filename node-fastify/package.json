@@ -4,19 +4,17 @@
   "license": "ISC",
   "type": "commonjs",
   "scripts": {
-    "d": "pnpm dev",
-    "dev": "tsx watch src/app.ts",
-    "build": "tsc -build",
-    "start": "node build/app.js",
-    "bs": "pnpm run build && pnpm run start"
+    "d": "tsx watch src/app.ts",
+    "b": "tsc -build",
+    "st": "node build/app.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "fastify": "^4.23.2"
+    "fastify": "^4.24.3"
   },
   "devDependencies": {
-    "@types/node": "^20.8.2",
-    "tsx": "^3.13.0",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.9.3",
+    "tsx": "^4.1.4",
+    "typescript": "^5.3.2"
   }
 }
